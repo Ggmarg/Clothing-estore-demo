@@ -1,0 +1,218 @@
+@import 'nav.css';
+
+html, .body{
+    background-color: #f6f1eb;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.home{
+    height: 100vh;
+    background-image: url("../images/nick-de-partee-5DLBoEX99Cs-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.home .home-text{
+    padding: 3.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.home .home-text h2{
+    color: white;
+    font-size: 5rem;
+}
+
+.home .home-text p{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.news{
+    height: 100vh;
+    background-image: url("../images/men-clothes.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.news .collection-text h2{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.news .collection-text a{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 1rem;
+    background-color: rgba(255,255,255, 0.5);
+    color: white;
+    border: 1px black solid;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.news .collection-text a:hover{
+    background-color: rgba(0,0,0, 1);
+    border: none;
+}
+
+.news::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.products h2{
+    text-align: center;
+    font-size: 3.5rem;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+.products #products-head::after{
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    height: 2px;
+    display: block;
+}
+
+.products .product-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.products .product-container .postcard{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    height:950px;
+    width:660px;
+}
+
+.products .product-container .postcard:hover{
+    transform: scale(.95);
+
+}
+
+.products .product-container .postcard img{
+    width: 100%;
+}
+
+.products .product-container .postcard::before{
+    content: '';
+    position: absolute;
+    top:0; left:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s;
+}
+
+
+.products .product-container .postcard a{
+    display: inline-block;
+    padding: 2rem 3rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    border: 1px solid black;
+    transform: translate(-50%);
+    transition: .2s;
+}
+
+.products .product-container .postcard a:hover{
+    background: rgba(0,0,0, 1);
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #d6cec4;
+    background-color: rgba(0,0,0,0.92);
+    height: 10vh;
+    color: white;
+    font-weight: bold;
+}
+
+.footer h2{
+    font-size: 3rem;
+}
+
+.footer .social-contacts .fab{
+    margin: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1400px){
+    html{
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 720px){
+    html{
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 600px){
+    html{
+        font-size: 65%;
+    }
+}

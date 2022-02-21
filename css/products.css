@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 500px);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.products{
+    margin-top: 10vh;
+}
+
+.products h2{
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.products p{
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.product{
+    position: relative;
+    border: 1px solid black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.product:hover{
+    box-shadow:0 5px 10px rgba(0,0,0,.7);
+    transform: scale(.95);
+}
+
+.products img{
+    height: 90%;
+    width: 100%;
+}
+
+.product .product-btn{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem;
+    width: 80%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, .5);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+}
+
+.product:hover .product-btn{
+    opacity: 1;
+}
+
+.product .product-btn:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.shirt{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.shirt{
+    height: 500px;
+    width: 500px;
+}
+
+.dress{
+    height: 500px;
+    width: 500px;
+}
