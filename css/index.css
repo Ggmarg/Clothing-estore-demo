@@ -216,3 +216,9 @@ html{
         font-size: 65%;
     }
 }
+
+@media (max-width: 400px){
+    html{
+        font-size: 45%;
+    }
+}
