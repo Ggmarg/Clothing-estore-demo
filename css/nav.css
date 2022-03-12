@@ -1,8 +1,11 @@
+.header{
+    z-index: 1000;
+}
 
 .header .navigation{
     background-color: rgba(0,0,0,0.9);
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     right: 0;
     left: 0;
     top: 0;
