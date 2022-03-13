@@ -1,12 +1,15 @@
+.header{
+    z-index: 1000;
+}
 
 .header .navigation{
     background-color: rgba(0,0,0,0.9);
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     right: 0;
     left: 0;
     top: 0;
-    height: 11vh;
+    height: 10rem;
 }
 
 
@@ -106,7 +109,7 @@
         font-size: 3rem;
     }
 
-    .header .navigation .top .icons{
+    .header .navigation .top .icons .fas{
         font-size: 3rem;
     }
 
@@ -119,10 +122,10 @@
     .header .nav-links{
         background-color: black;
         position: absolute;
-        top: 10vh;
+        top: 100%;
         right: 0;
         left: 0;
-        height: 35vh;
+        height: 25rem;
         text-align: left;
         z-index: 2;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -132,4 +135,8 @@
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         
     }
+}
+
+@media(max-width: 440px){
+    
 }
