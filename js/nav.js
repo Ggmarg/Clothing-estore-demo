@@ -40,7 +40,7 @@ let createFoot = () =>{
                 <i class="fab fa-telegram"></i>
             </div>
             <div class="phone-numbers">
-                <p>phone</p>
+                <p><span class="fa fa-phone"></span> phone</p>
                 <p>+423432432</p>
                 <p>+423652731</p>
             </div>
