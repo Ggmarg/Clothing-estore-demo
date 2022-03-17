@@ -27,7 +27,7 @@ faSearch.onclick = () =>{
         if(value == title){
             product.style.display = 'grid';
         }
-    })
+    });
     h.forEach(h2 =>{
         let title = h2.getAttribute('data-title');
         if(value == title){
@@ -35,9 +35,3 @@ faSearch.onclick = () =>{
         }
     });
 }
-
-search.addEventListener("keyup", () =>{
-    if (KeyboardEvent.code === "Enter") {
-        faSearch.click();
-    }
-  });
