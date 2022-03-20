@@ -5,7 +5,7 @@ let createNav = () =>{
                 <div class="top">
                     <a href="index.html" class="logo">Clothing</a>
                     <div class="search">
-                        <input type="text" placeholder="search here...">
+                        <input type="text" placeholder="search here..." id="search">
                         <label class="fas fa-search"></label>
                     </div>
 
@@ -48,3 +48,37 @@ let createFoot = () =>{
 }
 
 createFoot();
+
+let search = document.querySelector('#search');
+let faSearch = document.querySelector(".fa-search")
+let products = document.querySelectorAll('.list');
+let h = document.querySelectorAll('h2');
+let unfoundProduct = document.querySelector('.wrongSearch');
+
+faSearch.onclick = () =>{
+    let value = search.value;
+    console.log(typeof value);
+    
+    // products.forEach(product => product.style.display = 'none');
+    // h.forEach(h2 => h2.style.display = 'none');
+    products.forEach(product =>{
+        let title = product.getAttribute('data-title');
+        if(value == title){
+            product.style.display = 'grid';
+            unfoundProduct.style.display = 'none';
+        }
+        if(value != title){
+            product.style.display = 'none';
+        }
+    });
+    h.forEach(h2 =>{
+        let title = h2.getAttribute('data-title');
+        if(value == title){
+            h2.style.display = 'block';
+        }
+        if(value != title){
+            h2.style.display = 'none';
+        }
+    });
+}
+
