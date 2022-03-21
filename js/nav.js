@@ -18,10 +18,10 @@ let createNav = () =>{
 
                 <div class="bottom">
                     <nav class="nav-links">
-                        <a href="index.html">home</a>
-                        <a href="men.html">men</a>
-                        <a href="women.html">women</a>
-                        <a href="about_us.html">about us</a>
+                        <a href="index.html" data-title="home">home</a>
+                        <a href="men.html" data-title="men">men</a>
+                        <a href="women.html" data-title="women">women</a>
+                        <a href="about_us.html" data-title="about us">about us</a>
                     </nav>
                 </div>
     `;
@@ -54,10 +54,20 @@ let faSearch = document.querySelector(".fa-search")
 let products = document.querySelectorAll('.list');
 let h = document.querySelectorAll('h2');
 let unfoundProduct = document.querySelector('.wrongSearch');
+let menus = document.querySelectorAll('.nav-links a');
 
 faSearch.onclick = () =>{
     let value = search.value;
-    console.log(typeof value);
+    menus.forEach(menu => {
+    let title = menu.getAttribute('data-title');
+
+        if(value == title){
+            window.open(`${title}.html`)
+        }
+        else if(value == "about us"){
+            window.open('about_us.html')
+        }
+    })
     
     // products.forEach(product => product.style.display = 'none');
     // h.forEach(h2 => h2.style.display = 'none');
@@ -81,4 +91,3 @@ faSearch.onclick = () =>{
         }
     });
 }
-
