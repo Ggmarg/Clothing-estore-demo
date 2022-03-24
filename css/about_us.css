@@ -29,10 +29,11 @@
 }
 
 .about_us .about_us_text h2{
-    font-size: 3.5rem;
+    font-size: 4.5rem;
 }
 
 .about_us .about_us_text p{
+    font-size: 2rem;
     text-align: justify;
     text-transform: none;
 }
