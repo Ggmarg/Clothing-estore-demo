@@ -59,12 +59,14 @@ faSearch.onclick = () =>{
     let value = search.value;
     menus.forEach(menu => {
     let title = menu.getAttribute('data-title');
-
-        if(value == title){
-            window.open(`${title}.html`)
+        if(value === title && value !== "home" && value !== "about us"){
+            window.location.replace(`${title}.html`);
         }
-        else if(value == "about us"){
-            window.open('about_us.html')
+        else if(value === "home"){
+            window.location.replace('index.html');
+        }
+        else if(value === "about us"){
+            window.location.replace('about_us.html');
         }
     })
     
