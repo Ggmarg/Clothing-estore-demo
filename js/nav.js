@@ -53,7 +53,6 @@ let search = document.querySelector('#search');
 let faSearch = document.querySelector(".fa-search")
 let products = document.querySelectorAll('.list');
 let h = document.querySelectorAll('h2');
-let unfoundProduct = document.querySelector('.wrongSearch');
 let menus = document.querySelectorAll('.nav-links a');
 
 faSearch.onclick = () =>{
@@ -75,7 +74,6 @@ faSearch.onclick = () =>{
         let title = product.getAttribute('data-title');
         if(value == title){
             product.style.display = 'grid';
-            unfoundProduct.style.display = 'none';
         }
         if(value != title){
             product.style.display = 'none';
